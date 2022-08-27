@@ -23,7 +23,6 @@ for page in range(0, page_num, page_sep):
     start = page
     end = start + page_sep
     merger.append(fle, pages=(start,end))
-    # file_name =  outputFolder + str(start) + '.pdf'
     file_name =  outputFolder + basename_without_ext + str(start) + '.pdf'
     print(file_name)
     merger.write(file_name)
