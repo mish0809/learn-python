@@ -8,10 +8,13 @@ fle = filedialog.askopenfilename(filetypes = typ, initialdir = dir) #分割し�
 
 basename_without_ext  = os.path.splitext(os.path.basename(fle))[0]
 print(fle)
+print(os.path.dirname(fle))
 print(basename_without_ext)
 
-outputFolder = 'temp\\' #出力先フォルダ
+
+outputFolder = os.path.dirname(fle)+'\\' #出力先フォルダ
 page_sep = 2 #何ページごとに分割したいか
+print(outputFolder)
 
 #pdfのページ数を把握する
 reader = PyPDF2.PdfFileReader(fle)
